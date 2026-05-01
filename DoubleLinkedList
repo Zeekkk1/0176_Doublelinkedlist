@@ -231,9 +231,15 @@ int main()
             list.revtraverse();
             break;
         case '5':
-            list
+            list.searchData();
+            break;
+        case '6':
+            return 0;
+        default:
+            cout << "invalid option\n";
     
         }
+        
 
     }
 }
