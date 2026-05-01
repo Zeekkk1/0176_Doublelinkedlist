@@ -44,7 +44,7 @@ public:
             newNode->next = START;
 
             if (START != NULL)
-                START->prev = newNode
+                START->prev = newNode;
 
             newNode->prev = NULL;
 
@@ -54,7 +54,7 @@ public:
 
 
         Node *current = START;
-        while (current->next != NULL && current->next->noMHS < nim)
+        while (current->next != NULL && current->next->noMhS < nim)
         {
             current = current->next;
         }
@@ -111,7 +111,7 @@ public:
                 current->prev->next = current->next;
 
                 if (current->next != NULL)
-                    current->next_.prev = current->prev;
+                    current->next->prev = current->prev;
             }
 
             delete current;
@@ -146,14 +146,14 @@ public:
         if (START == NULL)
         {
             cout << "\nList is empty" << endl;
-            return
+            return;
         }
 
         Node *currentNode = START;
         int i = 0;
-        whilee (currentNode->next != NULL)
+        while (currentNode->next != NULL)
         {
-             curretNode = currentNode->next;
+             currentNode = currentNode->next;
              i++;
         }
 
@@ -219,7 +219,7 @@ int main()
         switch (choice)
         {
         case '1':
-            list.addNode();
+            list.addnode();
             break;
         case '2':
             list.hapus();
@@ -227,7 +227,7 @@ int main()
         case '3':
             list.traverse();
             break;
-        case '4'
+        case '4':
             list.revtraverse();
             break;
         case '5':
