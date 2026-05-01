@@ -58,5 +58,15 @@ public:
         {
             current = current->next;
         }
+
+        if (current->next != NULL && current->next->noMhs)
+        {
+            cout << "\nduplicate roll numbers not allowed" << endl;
+            return;
+        }
+
+
+        newNode->next = current->next;
+        newNode->next->prev = newNode;
     }
 }
